@@ -6,16 +6,20 @@ import SearchCard from "./SearchCard"
 function NavBar() {
   const [showNavBarCard, setShowNavBarCard] = React.useState<boolean>(false)
   const [searchValue, setSearchValue] = React.useState<string>("")
-  const [getSearchValue, setGetSearchValue] = React.useState<string[]>([])
-
+  let [getSearchValue, setGetSearchValue] = React.useState<string[]>([])
+  let searchedIems: string[] | number
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value
     setSearchValue(value)
   }
 
   const handleSearch = () => {
-    getSearchValue.push(searchValue)
-    console.log(getSearchValue)
+    // searchedIems.push(searchValue)
+    searchedIems = getSearchValue.push(searchValue)
+    setGetSearchValue(searchedIems)
+  }
+  const handleOnclickOnSearchIcon = () => {
+    getSearchValue = []
   }
 
   return (
@@ -62,7 +66,10 @@ function NavBar() {
         </div>
       </section>
       {showNavBarCard && <NavCard />}
-      <SearchCard />
+      <SearchCard
+        listOfSearchedItems={getSearchValue}
+        clearSearchedItems={handleOnclickOnSearchIcon}
+      />
     </>
   )
 }
