@@ -1,10 +1,10 @@
-import Footer from "./Components/Footer/index"
+import MobileMenu from "./Components/MobileMenu/index"
 import "./App.css"
 
 function App() {
   return (
     <div className="App">
-      <Footer />
+      <MobileMenu />
     </div>
   )
 }
