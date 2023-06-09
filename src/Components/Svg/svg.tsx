@@ -69,10 +69,10 @@ export const Svg: SvgProps = {
     return (
       <svg
         fill="none"
-        height="30"
+        height="20"
         role="img"
         viewBox="0 0 20 20"
-        width="30"
+        width="20"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
@@ -96,7 +96,7 @@ export const Svg: SvgProps = {
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
         box-size="4"
-        className="bg-black text-white plb-0.5 pis-0.25 pie-0.25 rounded-[6rem] h-[42px] w-[42px]"
+        className="bg-black text-white plb-0.5 pis-0.25 pie-0.25 rounded-[6rem] h-[32px] w-[32px]"
         data-testid="blankAvatar"
       >
         <path
@@ -442,10 +442,10 @@ export const Svg: SvgProps = {
     return (
       <svg
         fill="none"
-        height="40"
+        height="24"
         role="img"
         viewBox="0 0 24 24"
-        width="40"
+        width="24"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

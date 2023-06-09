@@ -3,15 +3,11 @@ import React from "react"
 type ButtonProps = {
   children: React.ReactNode
   className: string
-  onClick: () => void
+  //   onClick: () => void
 }
 
-function Button({ children, className, onClick }: ButtonProps) {
-  return (
-    <div className={className} onClick={onClick}>
-      {children}
-    </div>
-  )
+function Button({ children, className }: ButtonProps) {
+  return <div className={className}>{children}</div>
 }
 
 export default Button
