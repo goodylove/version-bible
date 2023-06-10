@@ -10,7 +10,7 @@ export default function SearchCard({
   clearSearchedItems,
 }: SearchProps) {
   return (
-    <div className="max-w-[400px] rounded-lg shadow-lg bg-[#FFFF] p-5 ml-[30rem]">
+    <div className="max-w-[400px] rounded-lg shadow-lg bg-[#FFFF] p-5 ml-[31rem] cursor-pointer">
       <div className="flex justify-between">
         <span>Recent Search</span>
         <span className="text-blue-400" onClick={clearSearchedItems}>
