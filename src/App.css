@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.card {
+  inset: 0px 0px auto auto;
+}
 /* const [book, setBook] = useState(searchQuery ? searchQuery : "" );
     const [result, setResult] = useState( searchResults ? searchResults:[]);
     const apiKey = ("MY API")

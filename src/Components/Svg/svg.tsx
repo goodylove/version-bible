@@ -3,6 +3,7 @@ import { ReactElement } from "react"
 type SvgProps = {
   profileIcon(): ReactElement
   search(): ReactElement
+  searchWhite(): ReactElement
   barsIcon(): ReactElement
   plans(): ReactElement
   plansActive(): ReactElement
@@ -23,7 +24,7 @@ type SvgProps = {
 }
 
 export const Svg: SvgProps = {
-  search() {
+  searchWhite() {
     return (
       <svg
         aria-labelledby=":ro:"
@@ -34,6 +35,28 @@ export const Svg: SvgProps = {
         width="24"
         xmlns="http://www.w3.org/2000/svg"
         color="white"
+      >
+        <title id=":ro:">Search</title>
+        <path
+          clipRule="evenodd"
+          d="M11.5 18a6.5 6.5 0 1 1 5.249-2.665l2.458 2.458a1 1 0 0 1-1.414 1.414l-2.458-2.458A6.47 6.47 0 0 1 11.5 18Zm0-2a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"
+          fill="currentColor"
+          fillRule="evenodd"
+        ></path>
+      </svg>
+    )
+  },
+  search() {
+    return (
+      <svg
+        aria-labelledby=":ro:"
+        fill="none"
+        height="24"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+        color="black"
       >
         <title id=":ro:">Search</title>
         <path

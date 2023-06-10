@@ -26,15 +26,15 @@ function NavBar() {
 
   return (
     <>
-      <section className="w-full mt-3 p-5 flex justify-center  cursor-pointer relative">
+      <section className="w-full mt-3 p-2 flex justify-center  cursor-pointer relative">
         <div className="flex gap-2 w-[96%] justify-between items-center">
           <div className="">{Svg.YouVersionIcon()}</div>
-          <ul className="flex justify-around gap-5 font-[700]">
+          <ul className="hidden  justify-around gap-5 font-[700] lg:flex ">
             <li className="hover:bg-[#EDEFEF] rounded-full p-3">Bible</li>
             <li className="hover:bg-[#EDEFEF] rounded-full p-3">Plans</li>
             <li className="hover:bg-[#EDEFEF] rounded-full p-3">Videos</li>
           </ul>
-          <div className="flex border-2 rounded-full  px-2 py-2 w-[24rem] justify-between bg-[#EDEFEF] items-center">
+          <div className="hidden  border-2 rounded-full  px-2 py-2 w-[34rem] justify-between bg-[#EDEFEF] items-center sm:flex">
             <input
               aria-label="Search"
               className="bg-[#EDEFEF] border-transparent rounded-5 border-solid box-border font-body font-medium text-black  text-16 lg:text-13 sm:text-base h-5 sm:h-4 leading-default outline-none  placeholder-gray-25 p-3"
@@ -48,22 +48,29 @@ function NavBar() {
               className="w-10 h-10 rounded-full bg-red-600 flex justify-center items-center"
               onClick={handleSearch}
             >
-              {Svg.search()}
+              {Svg.searchWhite()}
             </button>
           </div>
-          <div className="font-[700] hover:bg-[#EDEFEF] rounded-full p-3">
+          <div className="font-[700] hover:bg-[#EDEFEF] rounded-full p-3 text-[12px] hidden md:block">
             {" "}
             Get the app
           </div>
-          <div className="hover:bg-[#EDEFEF] rounded-full p-2">
+          <div className="hover:bg-[#EDEFEF] rounded-full p-2 hidden sm:block">
             {Svg.english()}
           </div>
-          <div
-            className="flex items-center hover:bg-[#EDEFEF] rounded-full  p-2"
-            onClick={() => setShowNavBarCard((prev) => !prev)}
-          >
-            {Svg.barsIcon()}
-            {Svg.profileIcon()}
+          <div className="flex gap-2 items-center">
+            <div className="flex sm:hidden bg-[#EDEFEF] rounded-full p-1">
+              {Svg.search()}
+            </div>
+            <div
+              className={`flex items-center hover:bg-[#EDEFEF] rounded-full  p-2 ${
+                showNavBarCard ? "border-2 border-black" : "border-none"
+              }`}
+              onClick={() => setShowNavBarCard((prev) => !prev)}
+            >
+              {Svg.barsIcon()}
+              {Svg.profileIcon()}
+            </div>
           </div>
         </div>
       </section>
