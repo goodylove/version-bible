@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 export const NavCard = () => {
   return (
     <section className="w-full flex relative justify-center items-center">
-      <div className="  card  w-[300px] border-3 border-red-500 bg-[#FFFFFF] rounded-lg shadow-lg flex  flex-col  cursor-pointer absolute top-[1.3rem]   lg:right-[6rem]">
+      <div className="  card  w-[300px] border-3 border-red-500 bg-[#FFFFFF] rounded-lg shadow-lg flex  flex-col  cursor-pointer fixed top-[6.3rem]   lg:right-[6rem]">
         <div className="bg-[#EDEFEF] py-4 flex flex-col gap-4 rounded-md m-8 justify-center items-center ">
           <div className="flex  items-start gap-2  p-2 ">
             <img

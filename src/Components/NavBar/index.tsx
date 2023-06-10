@@ -26,7 +26,7 @@ function NavBar() {
 
   return (
     <>
-      <section className="w-full mt-3 p-2 flex justify-center  cursor-pointer relative">
+      <section className="w-full  p-3 flex justify-center  cursor-pointer fixed top-0 z-50 bg-white">
         <div className="flex gap-2 w-[96%] justify-between items-center">
           <div className="">{Svg.YouVersionIcon()}</div>
           <ul className="hidden  justify-around gap-5 font-[700] lg:flex ">

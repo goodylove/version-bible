@@ -7,6 +7,12 @@
 .card {
   inset: 0px 0px auto auto;
 }
+/* .third-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url("https://www.bible.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblurred-mountains.c6d9a87d.jpeg&w=1920&q=75");
+} */
 /* const [book, setBook] = useState(searchQuery ? searchQuery : "" );
     const [result, setResult] = useState( searchResults ? searchResults:[]);
     const apiKey = ("MY API")

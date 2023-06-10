@@ -9,9 +9,11 @@ function App() {
   return (
     <div className="App ">
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <div className="mt-[9rem]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </div>
   )
 }
