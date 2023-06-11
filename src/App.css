@@ -3,3 +3,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.card {
+  inset: 0px 0px auto auto;
+}
+/* .third-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url("https://www.bible.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblurred-mountains.c6d9a87d.jpeg&w=1920&q=75");
+} */
+/* const [book, setBook] = useState(searchQuery ? searchQuery : "" );
+    const [result, setResult] = useState( searchResults ? searchResults:[]);
+    const apiKey = ("MY API")
+    
+    function handleChange(event) {
+        const book = event.target.value;
+        console.log(event.target.value);
+        setBook(book);
+    }
+    function handleSubmit(event) {
+        event.preventDefault();
+        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key=" + apiKey + "&maxResults=20")
+            .then(data => {
+                console.log(data.data.items);
+                setResult(data.data.items);
+
+// STORE THE DATA HERE 
+               window.sessionStorage.setItem("searchDetails",JSON.stringify({searchQuery:book,searchDetails:data.data.items}))
+            })
+    }
+
+    return (
+        <div>
+            <div className="hero-container">
+                <h1>Search your book</h1>
+                <p>Discover the best books ever</p>
+                <form onSubmit={handleSubmit}>
+                    <div className='container'>
+                        <div>
+                            <input onChange={handleChange} className="form" autoFocus placeholder="Enter the title of the book" type="text" />
+                            <div style={{ marginTop: '20px' }}></div>
+                            <div className='d-grid gap-2 '>
+                                <input type="submit" value="SEARCH" className="btn btn-primary btn-lg mx-auto" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div> */
