@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "./../../Components/Button/index"
 import { AiOutlineArrowRight } from "react-icons/ai"
+import Footer from "../../Components/Footer"
 
 function Home() {
   return (
@@ -154,6 +155,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }
