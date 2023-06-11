@@ -2,9 +2,16 @@ import React from "react"
 import Button from "./../Button/index"
 import { Link } from "react-router-dom"
 
-export const NavCard = () => {
+type NavCardProps = {
+  docRef: React.RefObject<HTMLDivElement>
+}
+
+export const NavCard = ({ docRef }: NavCardProps) => {
   return (
-    <section className="w-full flex relative justify-center items-center">
+    <div
+      className="w-full flex relative justify-center items-center"
+      ref={docRef}
+    >
       <div className="  card  w-[300px] border-3 border-red-500 bg-[#FFFFFF] rounded-lg shadow-lg flex  flex-col  cursor-pointer fixed top-[6.3rem]   lg:right-[6rem]">
         <div className="bg-[#EDEFEF] py-4 flex flex-col gap-4 rounded-md m-8 justify-center items-center ">
           <div className="flex  items-start gap-2  p-2 ">
@@ -37,6 +44,6 @@ export const NavCard = () => {
           </h3>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

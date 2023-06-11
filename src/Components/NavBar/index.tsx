@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useRef, MutableRefObject } from "react"
 import { Svg } from "./../Svg/svg"
 import { NavCard } from "./NavBarCard"
 import SearchCard from "./SearchCard"
 
 function NavBar() {
+  const myRef = React.useRef<HTMLDivElement>(null)
   const [showNavBarCard, setShowNavBarCard] = React.useState<boolean>(false)
   const [searchValue, setSearchValue] = React.useState<string>("")
   let [getSearchValue, setGetSearchValue] = React.useState<string[]>([])
@@ -23,6 +24,23 @@ function NavBar() {
   const handleOnclickOnSearchIcon = () => {
     setShowSearchCard(false)
   }
+
+  React.useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (myRef.current) {
+        if (!myRef.current.contains(e.target as Node)) {
+          setShowNavBarCard((prev) => !prev)
+          console.log(myRef.current)
+        }
+      }
+    }
+
+    document.addEventListener("mousedown", handler)
+
+    return () => {
+      document.removeEventListener("mousedown", handler)
+    }
+  }, [])
 
   return (
     <>
@@ -74,7 +92,7 @@ function NavBar() {
           </div>
         </div>
       </section>
-      {showNavBarCard && <NavCard />}
+      {showNavBarCard && <NavCard docRef={myRef} />}
 
       {showSearchCard && (
         <SearchCard
