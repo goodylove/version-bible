@@ -12,7 +12,7 @@ export const NavCard = ({ docRef }: NavCardProps) => {
       className="w-full flex relative justify-center items-center"
       ref={docRef}
     >
-      <div className="  card  w-[300px] border-3 border-red-500 bg-[#FFFFFF] rounded-lg shadow-lg flex  flex-col  cursor-pointer fixed top-[6.3rem]   lg:right-[6rem]">
+      <div className="  card  w-[300px] border-3 border-red-500 bg-[#FFFFFF] rounded-lg shadow-lg flex  flex-col  cursor-pointer fixed top-[6.3rem]   lg:right-[6rem] z-50">
         <div className="bg-[#EDEFEF] py-4 flex flex-col gap-4 rounded-md m-8 justify-center items-center ">
           <div className="flex  items-start gap-2  p-2 ">
             <img
