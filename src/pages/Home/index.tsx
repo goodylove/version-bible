@@ -1,16 +1,17 @@
 import React from "react"
 import Button from "./../../Components/Button/index"
 import { AiOutlineArrowRight } from "react-icons/ai"
+import Footer from "../../Components/Footer"
 
 function Home() {
   return (
     <main className="w-full justify-center items-center mt-8 flex-col">
       <section className="w-full flex justify-center flex-col items-center text-center">
-        <h2 className="font-[700] text-[2rem]">
+        <h2 className="font-[700]  lg:text-[2rem] text-[1.1rem]">
           Get a free bible for your phone and tablet
         </h2>
         <div className="my-4 flex flex-col justify-center items-center">
-          <p className="font-[500]">
+          <p className="font-[500] text-[13px]">
             online and offline bible is avaliable any time.
           </p>
           <p className="font-[500]">No ads No Purchase</p>
@@ -107,14 +108,16 @@ function Home() {
           className="w-full h-full"
         />
 
-        <div className=" flex justify-center items-center absolute ,lg:top-[8rem] flex-col top-[8rem]  ">
-          <div className="w-full p-5 flex items-center md:flex-row lg:flex-row  flex-col  rounded-md ">
-            <img
-              src="https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F58093%2F1280x1280.jpg&w=640&q=75"
-              alt=""
-              className=" md:w-[400px] md:rounded-l-md w-[360px] h-[240px] lg:rounded-l-md  md:h-[400px]  rounded-t-md lg:h-[400px]"
-            />
-            <div className="lg:w-[500px] bg-slate-50 md:h-[400px]  h-[240px]   lg:h-[400px] flex  flex-col p-5 md:rounded-r-md w-[360px] lg:rounded-r-md rounded-b-md">
+        <div className=" flex justify-center items-center absolute lg:top-[8rem] flex-col top-[8rem] w-full  lg:pl-5 ">
+          <div className="p-5 flex items-center md:flex-row lg:flex-row  flex-col  rounded-md ">
+            <div className="max-w-[426px] w-full">
+              <img
+                src="https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F58093%2F1280x1280.jpg&w=640&q=75"
+                alt=""
+                className="  md:rounded-l-md w-full  h-[240px] lg:rounded-l-md  md:h-[400px]  rounded-t-md max-w-full "
+              />
+            </div>
+            <div className=" bg-slate-50 md:h-[400px]  h-[240px]   lg:h-[400px] flex  flex-col p-5 md:rounded-r-md md:w-[58%] lg:rounded-r-md rounded-b-md">
               <p className="flex gap-2 md:my-3 my-1 items-center lg:my-3">
                 <img
                   src="https://www.bible.com/_next/static/media/votd.994902db.svg"
@@ -127,7 +130,7 @@ function Home() {
                 require of you? To act justly and to love mercy and to walk
                 humbly with your God.
               </h2>
-              <span className="text-[10px] md:my-3 my-2 lg:my-3 ">
+              <span className="text-[10px] md:my-3 my-1 lg:my-3 ">
                 Micah 6:8(MIC.6.8)
               </span>
               <div className="flex items-center gap-2">
@@ -139,7 +142,7 @@ function Home() {
                   Highlight,Bookmark or Share this verse
                 </span>
               </div>
-              <div className="flex items-center gap-2 mb-5">
+              <div className="flex items-center gap-2 mb-[2rem]">
                 <img
                   src="https://www.bible.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmail.e4086aa6.png&w=32&q=75"
                   alt=""
@@ -152,6 +155,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

@@ -5,6 +5,7 @@ import SearchCard from "./SearchCard"
 
 function NavBar() {
   const myRef = React.useRef<HTMLDivElement>(null)
+  const [mobileSearch, setMobileSearch] = React.useState<boolean>(false)
   const [showNavBarCard, setShowNavBarCard] = React.useState<boolean>(false)
   const [searchValue, setSearchValue] = React.useState<string>("")
   let [getSearchValue, setGetSearchValue] = React.useState<string[]>([])
@@ -23,6 +24,9 @@ function NavBar() {
   }
   const handleOnclickOnSearchIcon = () => {
     setShowSearchCard(false)
+  }
+  const handleOnclickOnSearchMobile = () => {
+    setMobileSearch(true)
   }
 
   React.useEffect(() => {
@@ -44,7 +48,11 @@ function NavBar() {
 
   return (
     <>
-      <section className="w-full  p-3 flex justify-center  cursor-pointer fixed top-0 z-50 bg-white">
+      <section
+        className={`w-full  p-3 flex justify-center  cursor-pointer fixed top-0 z-50 bg-white ${
+          mobileSearch ? "hidden" : "visible"
+        }`}
+      >
         <div className="flex gap-2 w-[96%] justify-between items-center">
           <div className="">{Svg.YouVersionIcon()}</div>
           <ul className="hidden  justify-around gap-5 font-[700] lg:flex ">
@@ -69,7 +77,7 @@ function NavBar() {
               {Svg.searchWhite()}
             </button>
           </div>
-          <div className="font-[700] hover:bg-[#EDEFEF] rounded-full p-3 text-[12px] hidden md:block">
+          <div className="lg:font-[700] hover:bg-[#EDEFEF] rounded-full  text-[12px] hidden md:block md:text-[10px] md:font-[600]">
             {" "}
             Get the app
           </div>
@@ -77,7 +85,10 @@ function NavBar() {
             {Svg.english()}
           </div>
           <div className="flex gap-2 items-center">
-            <div className="flex sm:hidden bg-[#EDEFEF] rounded-full p-1">
+            <div
+              className="flex sm:hidden bg-[#EDEFEF] rounded-full p-1"
+              onClick={handleOnclickOnSearchMobile}
+            >
               {Svg.search()}
             </div>
             <div
@@ -92,6 +103,31 @@ function NavBar() {
           </div>
         </div>
       </section>
+
+      {mobileSearch && (
+        <div className="w-full flex justify-center items-center  gap-2 p-5 fixed top-0 bg-white z-50">
+          <div className=" border-2 rounded-full  gap-1  w-full  bg-[#EDEFEF] items-center flex p-2">
+            <button onClick={handleSearch}>{Svg.search()}</button>
+
+            <input
+              aria-label="Search"
+              className="bg-[#EDEFEF] border-transparent rounded-5 border-solid box-border font-body font-medium text-black  text-16 lg:text-13 sm:text-base h-5 sm:h-4 leading-default outline-none  placeholder-gray-25 p-3 w-full"
+              name="Search"
+              value={searchValue}
+              onChange={handleChange}
+              placeholder="Search Bible.com"
+            ></input>
+          </div>
+
+          <span
+            className="font-[700] text-[16px] hover:bg-[#EDEFEF] rounded-full p-2 cursor-pointer"
+            onClick={() => setMobileSearch(false)}
+          >
+            Cancel
+          </span>
+        </div>
+      )}
+
       {showNavBarCard && <NavCard docRef={myRef} />}
 
       {showSearchCard && (

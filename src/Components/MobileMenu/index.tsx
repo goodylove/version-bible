@@ -3,7 +3,7 @@ import { Svg } from "../Svg/svg"
 
 const MobileMenu = () => {
   return (
-    <section className="w-full h-4 flex justify-center  items-center  px-5  py-10 bg-slate-200 shadow-md md:hidden">
+    <section className="w-full h-4 flex justify-center  items-center  px-5  py-10 bg-white  shadow-md md:hidden fixed bottom-0 ">
       <div className="flex justify-between w-full text-[13px]">
         <span className="flex flex-col justify-center items-center">
           {Svg.home()}Home

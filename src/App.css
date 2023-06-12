@@ -7,6 +7,9 @@
 .card {
   inset: 0px 0px auto auto;
 }
+.search-Card {
+  inset: 0px 0px auto auto;
+}
 /* .third-section {
   background-size: cover;
   background-repeat: no-repeat;
