@@ -4,6 +4,15 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 import { useAppSelector } from "../../app/hooks"
 import Footer from "../../Components/Footer"
 import PlansCard from "./../../Components/PlansCard/index"
+
+type randomImageProps = string[]
+
+const randomImage: randomImageProps = [
+  "https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F67142%2F1280x1280.jpg&w=1920&q=75",
+  "https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F82511%2F1280x1280.jpg&w=1920&q=75",
+  "https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F58093%2F1280x1280.jpg&w=640&q=75",
+]
+
 type planCardProps = {
   img: string
   id: number
@@ -15,6 +24,10 @@ type planCardProps = {
 function Home() {
   // show data from the readingplans slice useing useAppSelector
   const data = useAppSelector((state: any) => state.readplan.plans)
+  // generate a random imgae
+  const getRandomImage = Math.floor(Math.random() * randomImage.length)
+  console.log(getRandomImage)
+
   return (
     <main className="w-full justify-center items-center mt-8 flex-col">
       <section className="w-full flex justify-center flex-col items-center text-center">
@@ -124,9 +137,9 @@ function Home() {
           <div className="p-5 flex items-center md:flex-row lg:flex-row  flex-col  rounded-md ">
             <div className="max-w-[426px] w-full">
               <img
-                src="https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F58093%2F1280x1280.jpg&w=640&q=75"
+                src={randomImage[getRandomImage]}
                 alt=""
-                className="  md:rounded-l-md w-full  h-[240px] lg:rounded-l-md  md:h-[400px]  rounded-t-md max-w-full "
+                className="  md:round:ed-l-md w-full  h-[240px] lg:rounded-l-md  md:h-[400px]  rounded-t-md max-w-full "
               />
             </div>
             <div className=" bg-slate-50 md:h-[400px]  h-[240px]   lg:h-[400px] flex  flex-col p-5 md:rounded-r-md md:w-[58%] lg:rounded-r-md rounded-b-md">
