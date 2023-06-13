@@ -2,6 +2,7 @@ import React from "react"
 import Button from "./../../Components/Button/index"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Footer from "../../Components/Footer"
+import PlansCard from "./../../Components/PlansCard/index"
 
 function Home() {
   return (
@@ -101,6 +102,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <PlansCard />
       <section className="third-section  h-[700px] my-[2rem] w-full relative  flex justify-center items-center md:h-[600px] pb-3">
         <img
           src="https://www.bible.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblurred-mountains.c6d9a87d.jpeg&w=1920&q=75"
