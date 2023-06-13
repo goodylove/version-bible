@@ -10,7 +10,7 @@ function NavBar() {
   const [searchValue, setSearchValue] = React.useState<string>("")
   let [getSearchValue, setGetSearchValue] = React.useState<string[]>([])
   const [showSearchCard, setShowSearchCard] = React.useState<boolean>(false)
-
+  //  const arr:string[] = []
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value
     setSearchValue(value)
