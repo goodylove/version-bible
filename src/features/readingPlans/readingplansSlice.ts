@@ -4,13 +4,13 @@ import { PayloadAction } from "@reduxjs/toolkit"
 // const myAction = PayloadAction
 import axios from "axios"
 
-type planProps = {
+export type planProps = {
   plans: string
 }
 
-type initialStateProps = {
+export type initialStateProps = {
   loading: boolean
-  plans: []
+  plans: planProps[]
   error: string
 }
 const initialState: initialStateProps = {

@@ -1,10 +1,20 @@
 import React from "react"
 import Button from "./../../Components/Button/index"
 import { AiOutlineArrowRight } from "react-icons/ai"
+import { useAppSelector } from "../../app/hooks"
 import Footer from "../../Components/Footer"
 import PlansCard from "./../../Components/PlansCard/index"
-
+type planCardProps = {
+  img: string
+  id: number
+  text: string
+  link: string
+  name: string
+  days: string[]
+}
 function Home() {
+  // show data from the readingplans slice useing useAppSelector
+  const data = useAppSelector((state: any) => state.readplan.plans)
   return (
     <main className="w-full justify-center items-center mt-8 flex-col">
       <section className="w-full flex justify-center flex-col items-center text-center">
@@ -102,7 +112,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <PlansCard />
+
       <section className="third-section  h-[700px] my-[2rem] w-full relative  flex justify-center items-center md:h-[600px] pb-3">
         <img
           src="https://www.bible.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblurred-mountains.c6d9a87d.jpeg&w=1920&q=75"
@@ -155,6 +165,29 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="flex justify-center items-center ">
+        <div className="flex flex-col justify-center items-center">
+          <img
+            src="https://www.bible.com/_next/static/media/plans.69f3a552.svg"
+            alt=""
+            className="w-10 h-10"
+          />
+          <h2 className="font-[700] text-[12px] tracking-[0.2rem] leading-normal">
+            FREE READING PLANS AND DEVOTIONALS
+          </h2>
+          <p className="text-[12px]">
+            Bible Plans help you engage with God's Word every day, a little at a
+            time.
+          </p>
+        </div>
+      </section>
+      <section className="flex justify-center w-full items-center my-9">
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 justify-items-center  w-[65%] gap-1">
+          {data.random?.map((plans: planCardProps, index: number) => (
+            <PlansCard item={plans} key={index} />
+          ))}
         </div>
       </section>
       <Footer />
