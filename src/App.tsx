@@ -7,6 +7,7 @@ import { fetchReadingPlans } from "./features/readingPlans/readingplansSlice"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import "./App.css"
+import Plans from "./pages/Plans/index"
 
 function App() {
   const disptach = useAppDispatch()
@@ -20,6 +21,7 @@ function App() {
       <div className="mt-[9rem]">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/plans" element={<Plans />} />
         </Routes>
       </div>
       <MobileMenu />
