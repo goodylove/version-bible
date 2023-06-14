@@ -10,6 +10,7 @@ import { planCardProps } from "../../types"
 function Home() {
   // show data from the readingplans slice useing useAppSelector
   const data = useAppSelector((state: any) => state.readplan)
+  console.log(data.error)
 
   // generate a random imgae
   const getRandomImage = Math.floor(Math.random() * randomImage.length)
@@ -182,9 +183,18 @@ function Home() {
           </p>
         </div>
       </section>
-      <section className="flex justify-center w-full items-center my-9">
+      <section className="flex justify-center w-full items-center my-9 flex-col">
         {data.loading && <h2 className="text-center">Loading.....</h2>}
-        {data.error && <h2>{data.error.message}</h2>}
+        {data.error && (
+          <div className="flex  items-center flex-col">
+            <img
+              src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?size=626&ext=jpg&ga=GA1.2.1464779587.1682418850&semt=sph"
+              alt=""
+            />
+
+            <span className="font-[600]"> {data.error}</span>
+          </div>
+        )}
         {data.plans && (
           <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 justify-items-center  w-[65%] gap-1">
             {data.plans.random?.map((plans: planCardProps, index: number) => (

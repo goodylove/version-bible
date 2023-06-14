@@ -9,3 +9,15 @@ export type planCardProps = {
 export type NavCardProps = {
   docRef: React.RefObject<HTMLDivElement>
 }
+
+export type ReadPlanProps = {
+  Random: planCardProps[]
+  Love: planCardProps[]
+  Anxiety: planCardProps[]
+  Kids: planCardProps[]
+  Hope: planCardProps[]
+  Fear: planCardProps[]
+  Depressions: planCardProps[]
+  Prayer: planCardProps[]
+  Work: planCardProps[]
+}

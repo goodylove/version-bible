@@ -10,6 +10,13 @@
 .search-Card {
   inset: 0px 0px auto auto;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+.slider {
+  transition: 0.4s;
+  /* transform: translateX(-100%); */
+}
 /* .third-section {
   background-size: cover;
   background-repeat: no-repeat;
