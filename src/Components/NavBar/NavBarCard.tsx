@@ -1,10 +1,7 @@
 import React from "react"
 import Button from "./../Button/index"
 import { Link } from "react-router-dom"
-
-type NavCardProps = {
-  docRef: React.RefObject<HTMLDivElement>
-}
+import { NavCardProps } from "../../types"
 
 export const NavCard = ({ docRef }: NavCardProps) => {
   return (

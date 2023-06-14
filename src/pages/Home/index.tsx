@@ -5,15 +5,8 @@ import { useAppSelector } from "../../app/hooks"
 import Footer from "../../Components/Footer"
 import PlansCard from "./../../Components/PlansCard/index"
 import { randomImage } from "../../Components/Helper/ExtraData"
+import { planCardProps } from "../../types"
 
-type planCardProps = {
-  img: string
-  id: number
-  text: string
-  link: string
-  name: string
-  days: string[]
-}
 function Home() {
   // show data from the readingplans slice useing useAppSelector
   const data = useAppSelector((state: any) => state.readplan)
