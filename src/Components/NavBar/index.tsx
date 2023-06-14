@@ -2,6 +2,7 @@ import React, { useRef, MutableRefObject } from "react"
 import { Svg } from "./../Svg/svg"
 import { NavCard } from "./NavBarCard"
 import SearchCard from "./SearchCard"
+import { Link } from "react-router-dom"
 
 function NavBar() {
   const myRef = React.useRef<HTMLDivElement>(null)
@@ -57,7 +58,9 @@ function NavBar() {
           <div className="">{Svg.YouVersionIcon()}</div>
           <ul className="hidden  justify-around gap-5 font-[700] lg:flex ">
             <li className="hover:bg-[#EDEFEF] rounded-full p-3">Bible</li>
-            <li className="hover:bg-[#EDEFEF] rounded-full p-3">Plans</li>
+            <li className="hover:bg-[#EDEFEF] rounded-full p-3">
+              <Link to="/plans">Plans</Link>
+            </li>
             <li className="hover:bg-[#EDEFEF] rounded-full p-3">Videos</li>
           </ul>
           <div className="hidden  border-2 rounded-full  px-2 py-2 w-[34rem] justify-between bg-[#EDEFEF] items-center sm:flex">
