@@ -4,14 +4,7 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 import { useAppSelector } from "../../app/hooks"
 import Footer from "../../Components/Footer"
 import PlansCard from "./../../Components/PlansCard/index"
-
-type randomImageProps = string[]
-
-const randomImage: randomImageProps = [
-  "https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F67142%2F1280x1280.jpg&w=1920&q=75",
-  "https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F82511%2F1280x1280.jpg&w=1920&q=75",
-  "https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2F640x640%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fstatic-youversionapi-com%2Fimages%2Fbase%2F58093%2F1280x1280.jpg&w=640&q=75",
-]
+import { randomImage } from "../../Components/Helper/ExtraData"
 
 type planCardProps = {
   img: string
@@ -23,10 +16,10 @@ type planCardProps = {
 }
 function Home() {
   // show data from the readingplans slice useing useAppSelector
-  const data = useAppSelector((state: any) => state.readplan.plans)
+  const data = useAppSelector((state: any) => state.readplan)
+
   // generate a random imgae
   const getRandomImage = Math.floor(Math.random() * randomImage.length)
-  console.log(getRandomImage)
 
   return (
     <main className="w-full justify-center items-center mt-8 flex-col">
@@ -180,8 +173,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-center items-center ">
-        <div className="flex flex-col justify-center items-center">
+      <section className="flex justify-center items-center w-full ">
+        <div className="flex flex-col justify-center items-center max-w-full w-full text-center">
           <img
             src="https://www.bible.com/_next/static/media/plans.69f3a552.svg"
             alt=""
@@ -197,11 +190,15 @@ function Home() {
         </div>
       </section>
       <section className="flex justify-center w-full items-center my-9">
-        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 justify-items-center  w-[65%] gap-1">
-          {data.random?.map((plans: planCardProps, index: number) => (
-            <PlansCard item={plans} key={index} />
-          ))}
-        </div>
+        {data.loading && <h2 className="text-center">Loading.....</h2>}
+        {data.error && <h2>{data.error.message}</h2>}
+        {data.plans && (
+          <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 justify-items-center  w-[65%] gap-1">
+            {data.plans.random?.map((plans: planCardProps, index: number) => (
+              <PlansCard item={plans} key={index} />
+            ))}
+          </div>
+        )}
       </section>
       <Footer />
     </main>
