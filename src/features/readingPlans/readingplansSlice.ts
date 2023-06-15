@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { PayloadAction } from "@reduxjs/toolkit"
 import axios from "axios"
-import Plans from "../../pages/Plans"
 import { ReadPlanProps } from "../../types"
 
 // const myAction = PayloadAction
@@ -11,7 +10,7 @@ type ErrorProps = {
 }
 export type initialStateProps = {
   loading: boolean
-  plans: ReadPlanProps[]
+  plans: string[]
   error: string
   value: number
 }
@@ -34,12 +33,7 @@ export const fetchReadingPlans = createAsyncThunk(
 const readplanSlice = createSlice({
   name: "readplan",
   initialState,
-  reducers: {
-    increaseSlider: (state: initialStateProps, action: any) => {
-      state.value = action.payload > 9 ? 0 : action.payload
-      // console.log(state.value)
-    },
-  },
+  reducers: {},
   extraReducers: (builder: any) => {
     builder.addCase(fetchReadingPlans.pending, (state: initialStateProps) => {
       state.loading = true
@@ -65,4 +59,3 @@ const readplanSlice = createSlice({
   },
 })
 export default readplanSlice.reducer
-export const { increaseSlider } = readplanSlice.actions
