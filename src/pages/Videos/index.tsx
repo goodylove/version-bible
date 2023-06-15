@@ -1,7 +1,19 @@
-import React from "react"
+// import React from "react"
 
-function Videos() {
-  return <div>Videos</div>
-}
+// import Slider from "react-slick"
 
-export default Videos
+// function Videos() {
+
+//   return (
+
+//     <Slider {...settings}>
+//       <div>
+
+//       </div>
+
+//       </Slider>
+
+//   )
+// }
+
+// export default Videos

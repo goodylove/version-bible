@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import "./App.css"
 import Plans from "./pages/Plans/index"
+// import Videos from "./pages/Videos/index"
 
 function App() {
   const disptach = useAppDispatch()
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/plans" element={<Plans />} />
+          {/* <Route path="/videos" element={<Videos />} /> */}
         </Routes>
       </div>
       <MobileMenu />

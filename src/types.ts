@@ -11,13 +11,24 @@ export type NavCardProps = {
 }
 
 export type ReadPlanProps = {
-  Random: planCardProps[]
-  Love: planCardProps[]
-  Anxiety: planCardProps[]
-  Kids: planCardProps[]
-  Hope: planCardProps[]
-  Fear: planCardProps[]
-  Depressions: planCardProps[]
-  Prayer: planCardProps[]
-  Work: planCardProps[]
+  plans: {
+    random: planCardProps[]
+    Love: planCardProps[]
+    Anxiety: planCardProps[]
+    Kids: planCardProps[]
+    Hope: planCardProps[]
+    Fear: planCardProps[]
+    Depressions: planCardProps[]
+    Prayer: planCardProps[]
+    Work: planCardProps[]
+  }
+}
+
+export type PlanCardTwoProps = {
+  item: {
+    img: string
+    link?: string
+    id: number
+  }
+  isClick?: boolean
 }
