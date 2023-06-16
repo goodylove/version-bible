@@ -1,19 +1,14 @@
 import React from "react"
 import { PlanCardTwoProps } from "./../../types"
 
-function PlanCardTwo({ item, isClick }: PlanCardTwoProps) {
-  //   console.log(item.id, id)
-
+function PlanCardTwo({ item, prop }: PlanCardTwoProps) {
   return (
-    <div>
+    <div className=" img-card">
       <img
         src={item.img}
         alt=""
-        className={`h-[400px]  max-w-[50%] ${
-          item.id && isClick ? "img-card " : "img-card2 "
-        }
-         `}
-        style={{ maxWidth: "none" }}
+        className={`h-[400px]  rounded-lg  `}
+        style={{ transition: "0.3s" }}
       />
     </div>
   )

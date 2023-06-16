@@ -14,8 +14,10 @@
   display: none;
 }
 .img-card {
-  transform: translateX(-300px);
-  transition: 0.5s;
+  /* transform: translateX(-300px); */
+  flex-shrink: 1;
+  transform: translateX(0%);
+  transition: 0.5s ease;
 }
 .img-card2 {
   transform: translateX(0px);

@@ -30,5 +30,5 @@ export type PlanCardTwoProps = {
     link?: string
     id: number
   }
-  isClick?: boolean
+  prop: React.CSSProperties
 }
