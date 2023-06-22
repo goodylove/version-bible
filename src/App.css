@@ -13,15 +13,16 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
 .img-card {
-  /* transform: translateX(-300px); */
-  flex-shrink: 1;
-  transform: translateX(0%);
-  transition: 0.5s ease;
+  animation: slide;
+  transition: 0.4s ease;
 }
-.img-card2 {
-  transform: translateX(0px);
-  /* transition: 0.5s; */
+
+@keyframes slide {
+  0% {
+    transform: translateX(-10px);
+  }
 }
 
 /* <img alt="Discover God's Vision" decoding="async" data-nimg="fill" class="max-w-container-md" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent" sizes="100vw" srcset="/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=3840&amp;q=75 3840w" src="https://www.bible.com/_next/image?url=https%3A%2F%2Fimageproxy.youversionapi.com%2Fhttps%3A%2F%2Fs3.amazonaws.com%2Fyvplans%2F743%2F720x405.jpg&amp;w=3840&amp;q=75"> */

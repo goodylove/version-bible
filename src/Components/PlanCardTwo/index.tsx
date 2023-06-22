@@ -1,16 +1,15 @@
 import React from "react"
 import { PlanCardTwoProps } from "./../../types"
 
-function PlanCardTwo({ item, prop }: PlanCardTwoProps) {
+function PlanCardTwo({ item }: PlanCardTwoProps) {
   return (
-    <div className=" img-card">
+    <>
       <img
         src={item.img}
         alt=""
-        className={`h-[400px]  rounded-lg  `}
-        style={{ transition: "0.3s" }}
+        className={`h-[300px] max-w-[500px]  rounded-lg  `}
       />
-    </div>
+    </>
   )
 }
 

@@ -30,5 +30,4 @@ export type PlanCardTwoProps = {
     link?: string
     id: number
   }
-  prop: React.CSSProperties
 }
