@@ -7,7 +7,7 @@ function PlanCardTwo({ item }: PlanCardTwoProps) {
       <img
         src={item.img}
         alt=""
-        className={`h-[400px] max-w-[500px]  rounded-lg  `}
+        className={`h-[300px] max-w-[500px]  rounded-lg  `}
       />
     </>
   )
