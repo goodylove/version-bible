@@ -35,7 +35,6 @@ function NavBar() {
       if (myRef.current) {
         if (!myRef.current.contains(e.target as Node)) {
           setShowNavBarCard((prev) => !prev)
-          console.log(myRef.current)
         }
       }
     }
