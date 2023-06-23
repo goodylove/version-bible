@@ -207,7 +207,7 @@ function Plans() {
               ?.slice(currenntSlid, currenntSlid + 5)
               .map((item: planCardProps, index: number) => (
                 <div
-                  className="flex flex-col gap-2 items-start pl-5 text-start items-center"
+                  className="flex flex-col gap-2  pl-5 text-start items-center"
                   key={index}
                 >
                   <div
