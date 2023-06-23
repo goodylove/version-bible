@@ -9,6 +9,7 @@ import Home from "./pages/Home"
 import "./App.css"
 import Plans from "./pages/Plans/index"
 // import Videos from "./pages/Videos/index"
+import Bible from "./pages/Bible/index"
 
 function App() {
   const disptach = useAppDispatch()
@@ -23,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/plans" element={<Plans />} />
-          {/* <Route path="/videos" element={<Videos />} /> */}
+          <Route path="/bible" element={<Bible />} />
         </Routes>
       </div>
       <MobileMenu />
