@@ -8,7 +8,7 @@ import { categories } from "../../Components/Helper/ExtraData"
 function Plans() {
   const dispatch = useAppDispatch()
   const data = useAppSelector((state) => state.readplan)
-  console.log(data.plans)
+  // console.log(data.plans)
 
   const [currentState, setCurrentState] = React.useState<number>(0)
   const [currenntSlid, setCurrenntSlid] = React.useState<number>(0)
@@ -32,15 +32,15 @@ function Plans() {
       </h3>
 
       <section className=" relative">
-        <div className="  z-50">
-          <span className=" absolute  top-[10rem] z-50  text-[30px] text-white  pl-4">
+        <div className="  z-50 ">
+          <span className=" absolute  opacity-0 hover:opacity-100 top-[9rem] z-50  text-[30px] text-white  pl-4">
             <GrPrevious
               onClick={() =>
                 handleLeft(setCurrentState, data.plans.random?.length - 3)
               }
             />
           </span>
-          <span className="absolute  top-[10rem]  z-50 text-[30px] text-white  right-3 ">
+          <span className="absolute  opacity-0 hover:opacity-100 top-[9rem]  z-50 text-[30px] text-white  right-3 ">
             <GrNext
               onClick={() =>
                 HandleRight(setCurrentState, data.plans.random?.length - 3)
@@ -98,7 +98,7 @@ function Plans() {
             {data.plans.Love?.slice(currenntSlid, currenntSlid + 5).map(
               (item: planCardProps, index: number) => (
                 <div
-                  className="flex flex-col gap-2 items-start pl-5 text-start items-center"
+                  className="flex flex-col gap-2 pl-5 text-start items-center"
                   key={index}
                 >
                   <div

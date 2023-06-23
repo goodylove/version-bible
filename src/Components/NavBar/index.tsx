@@ -56,7 +56,9 @@ function NavBar() {
         <div className="flex gap-2 w-[96%] justify-between items-center">
           <div className="">{Svg.YouVersionIcon()}</div>
           <ul className="hidden  justify-around gap-5 font-[700] lg:flex ">
-            <li className="hover:bg-[#EDEFEF] rounded-full p-3">Bible</li>
+            <li className="hover:bg-[#EDEFEF] rounded-full p-3">
+              <Link to="/bible">Bible</Link>
+            </li>
             <li className="hover:bg-[#EDEFEF] rounded-full p-3">
               <Link to="/plans">Plans</Link>
             </li>
