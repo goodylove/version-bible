@@ -10,7 +10,6 @@ import { planCardProps } from "../../types"
 function Home() {
   // show data from the readingplans slice useing useAppSelector
   const data = useAppSelector((state: any) => state.readplan)
-  console.log(data.error)
 
   // generate a random imgae
   const getRandomImage = Math.floor(Math.random() * randomImage.length)
