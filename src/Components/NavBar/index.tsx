@@ -71,7 +71,7 @@ function NavBar() {
               name="Search"
               value={searchValue}
               onChange={handleChange}
-              placeholder="Search Bible.com"
+              placeholder="Search Bible"
             ></input>
 
             <button

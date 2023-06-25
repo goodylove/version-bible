@@ -11,7 +11,8 @@
     "test": "vitest",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "coverage": "yarn test --coverage"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
